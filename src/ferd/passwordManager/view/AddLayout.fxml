@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import ferd.passwordManager.control.PersistentPromptTextField?>
+<?import ferd.passwordManager.control.PersistentPromptPasswordField?>
+
+<HBox alignment="BOTTOM_CENTER" stylesheets="@/ferd/passwordManager/view/mainstyle.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ferd.passwordManager.control.AddController">
+   <children>
+      <VBox>
+         <HBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </HBox.margin>
+         <children>
+            <PersistentPromptTextField fx:id="websiteField" onAction="#doAddWebsite" promptText="website">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+            </PersistentPromptTextField>
+            <PersistentPromptTextField fx:id="notesField" alignment="BOTTOM_LEFT" onAction="#doAddWebsite" promptText="notes">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </PersistentPromptTextField>
+         </children>
+      </VBox>
+      <Button fx:id="okButton" maxHeight="1.7976931348623157E308" mnemonicParsing="false" onAction="#doAddWebsite" text="OK" HBox.hgrow="NEVER">
+         <HBox.margin>
+            <Insets bottom="5.0" right="5.0" top="5.0" />
+         </HBox.margin>
+      </Button>
+   </children>
+</HBox>

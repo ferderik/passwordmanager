@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane prefHeight="500.0" prefWidth="600.0" styleClass="root" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ferd.passwordManager.control.LoginManagerController">
+   <center>
+      <VBox alignment="BOTTOM_CENTER" maxHeight="150.0" maxWidth="250.0" prefHeight="150.0" prefWidth="250.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Hello." fx:id="helloLabel">
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER_LEFT">
+               <children>
+                  <ferd.passwordManager.control.PersistentPromptTextField fx:id="nameField" promptText="Full Name" HBox.hgrow="ALWAYS" onAction="#login" />
+                  <CheckBox fx:id="saveBox" alignment="CENTER_RIGHT" contentDisplay="CENTER" graphicTextGap="2.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" text="Save" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </CheckBox>
+               </children>
+            </HBox>
+           <ferd.passwordManager.control.PersistentPromptPasswordField fx:id="passwordField" promptText="Password" onAction="#login">
+	            <VBox.margin>
+	               <Insets top="10.0" />
+	            </VBox.margin>
+			</ferd.passwordManager.control.PersistentPromptPasswordField>
+            <Button fx:id="loginButton" alignment="CENTER" mnemonicParsing="false" onAction="#login" text="Login">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
